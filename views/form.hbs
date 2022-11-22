@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        .textarea{
+            height: 50px;
+            width:80px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/form" method="post">
+    <label for="name">NAME</label>
+    <input type="text" name="name" placeholder="Name" style="display:block;">
+    {{!-- <input type="text" name="problem" placeholder="Describe your problem" class="textarea"> --}}
+    <label for="problem">Problem description</label>
+    <textarea name="problem" id="" cols="30" rows="10" placeholder="Describe your problem" style="display:block;"></textarea>
+    <label for="Price">Price</label>
+    <input type="number" name="Price" placeholder="write the price" style="display:block;"> 
+    <label for="address">address</label> 
+    <textarea name="address" id="" cols="30" rows="10" placeholder="addresss" style="display:block;"></textarea>
+    <input type="submit" value="POST">
+    </form>
+</body>
+</html>
