@@ -2,196 +2,24 @@
 <html>
 
 <head>
-    <meta charset='utf-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Login Form</title>
-    <meta name='description' content='' />
-    <meta name='viewport' content='width=device-width, initial-scale=1' />
-   {{!-- <link rel="stylesheet" href="../css/styles.css"> --}}
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #23242a;
-}
-
-.box {
-    position: relative;
-    width: 380px;
-    height: 420px;
-    background: #1c1c1c;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.box::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
-}
-
-.box::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
-    animation-delay: -3s;
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.form {
-    position: absolute;
-    inset: 2px;
-    border-radius: 8px;
-    background: #28292d;
-    z-index: 10;
-    padding: 50px 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-.form h2 {
-    color: #45f3ff;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.1em;
-}
-
-.inputBox {
-    position: relative;
-    width: 300;
-    margin-top: 35px;
-
-}
-
-.inputBox input {
-    position: relative;
-    width: 100%;
-    padding: 20px 10px 10px;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #23242a;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    z-index: 10;
-
-}
-
-.inputBox span {
-    position: absolute;
-    left: 0;
-    padding: 20px 0px 10px;
-    font-size: 1em;
-    color: #8f8f8f;
-    pointer-events: none;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-}
-
-.inputBox input:valid~span,
-.inputBox input:focus~span {
-    color: #45f3ff;
-    transform: translateX(0px) translateY(-34px);
-    font-size: 0.75em;
-    transition: 0.5s;
-}
-
-.inputBox i {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #45f3ff;
-    border-radius: 4px;
-    transition: 0.5s;
-    pointer-events: none;
-    z-index: 9;
-}
-
-.inputBox input:valid~i,
-.inputBox input:focus~i {
-    height: 40px;
-
-}
-
-.links {
-    display: flex;
-    justify-content: space-between;
-}
-
-.links a {
-    margin: 10px 0;
-    font-size: 0.75em;
-    color: #8f8f8f;
-    text-decoration: none;
-}
-
-.links a:hover,
-.links a:nth-child(2) {
-    color: #45f3ff;
-}
-
-input[type="submit"] {
-    border: none;
-    outline: none;
-    background: #45f3ff;
-    padding: 11px 25px;
-    width: 100px;
-    margin-top: 10px;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-
-}
-
-input[type="submit"]:active {
-    opacity: 0.8;
-}
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="/js/index.js" async defer></script>
 </head>
 
 <body>
-    <div class="box">
-        <form action="/signin" method="POST">
+    <!-- SignIn Form -->
+    <div class="box ">
         <div class="form">
+
+        <form action="/signin" method="post">
             <h2>Sign in</h2>
             <div class="inputBox">
                 <input type="text" required="required" name="emailid">
-                <span>Email id</span>
+                <span>Email Id</span>
                 <i></i>
             </div>
             <div class="inputBox">
@@ -201,13 +29,57 @@ input[type="submit"]:active {
             </div>
             <div class="links">
                 <a href="#">Forgot Password</a>
-                <a href="/signup" >Signup</a>
+                {{!-- <a class="signup" href="/signin">Signup</a> --}}
+                <p class="signup">Signup</p>
             </div>
-            <input type="submit" value="Login" >
-        </div>
+            <input type="submit" value="Login">
+
         </form>
+        </div>
     </div>
-    <script src='index.js' async defer></script>
+    <!-- Sign Up Form  -->
+    <div class="signup-box">
+        <div class="form">
+            <form action="/signup" method="post">
+            <h2 class="signUp-title">Sign Up</h2>
+            <div class="signUp-inputBox">
+                <input type="text" required="required" name="firstname" >
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="signUp-inputBox">
+                <input type="text" required="required" name="lastname">
+                <span>Full Name</span>
+                <i></i>
+            </div>
+            <div class="signUp-inputBox">
+                <input type="text" required="required" name="emailid">
+                <span>Email Id</span>
+                <i></i>
+            </div>
+            <div class="signUp-inputBox">
+                <input type="text" required="required" name="aadhar">
+                <span>Aadhar Card Number</span>
+                <i></i>
+            </div>
+            <div class="signUp-inputBox">
+                <input type="password" required="required" name="password">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="signUp-inputBox">
+                <input type="password" required="required" name="cpassword">
+                <span>Confirm Password</span>
+                <i></i>
+            </div>
+            <div class="signUp-links">
+                <a class="signin" href="/signup">Signin</a>
+            </div>
+            <input type="submit" value="Register">
+
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

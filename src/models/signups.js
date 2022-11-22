@@ -4,31 +4,31 @@ const helperschema= new mongoose.Schema({
 
     firstname:{
         type:String,
-        // required:true
+        required:true
     },
     
     lastname:{
         type:String,
-        // required:true
+        required:true
     },
     emailid:{
         type:String,
-        //required:true,
+        required:true,
          unique:true
     },
     aadhar:{
         type:Number,
-        // rerquired:true,
-        // unique:true
+        rerquired:true,
+        unique:true
     },
     password:{
         type:String,
-        // required:true,
+        required:true
         
     },
     cpassword:{
         type:String,
-        // required:true,
+        required:true
         
     }
 

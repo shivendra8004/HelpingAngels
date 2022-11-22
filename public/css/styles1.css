@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*, *::after ,*::before{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+
+:root{
+    --color-white:hsl(252,30%,100%);
+    --color-gray:hsl(252,30%,95%);
+    --color-primary:#a5e8eb;
+    --color-success:hsl(120,95%,65%);
+    --color-dark:#4f4c5b;
+    --color-black:hsl(252,30%,10%);
+
+    --border-radius:2rem;
+    --btn-padding:0.5rem 1.6rem;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color:var(--color-black) ;
+    background: #a5e8eb;
+    overflow-x: hidden;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ==============================Navbar Css Code Starts Here====================================== */
+
+nav{
+    width: 100%;
+    background: var(--color-white);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .container .options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.6rem;
+}
+nav .container .options .give-help{
+    font-weight: 600;
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+    background: var(--color-gray);
+}
+nav .container .options .give-help:hover,
+nav .container .options .get-help:hover{
+    background-color: var(--color-primary);
+    color: var(--color-gray);
+}
+nav .container .options .get-help{
+    font-weight: 600;
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+    background: var(--color-gray);
+}
+nav .container .options .login{
+    font-weight: 550;
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-black);
+    background:var(--color-gray);
+    transition: all 300ms ease;
+    font-size: 1rem;
+}
+
+/* ==============================Navbar Css Code Ends Here====================================== */
+
+/* ==============================Main Body Code Starts Here====================================== */
+main{
+    position: relative;
+    top: 4.4rem;
+    width: 85%;
+    margin: 0 auto;
+    height: max-content;
+}
+main .containers{
+    height: max-content;
+}
+
+/* ==============================Container-1 Code Starts Here====================================== */
+main .containers .container-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-white);
+}
+main .containers .container-1 .bg-img{
+    height: 25rem;
+    margin-top: 2rem;
+    margin-left: 5.4rem;
+}
+main .containers .container-1 .top-heading{
+    margin: 0 auto;
+}
+.text-heading{
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+.text-para{
+    text-align: center;
+    word-spacing: 0.1rem;
+    padding:  0 4rem;
+}
+/* ==============================Container-1 Code Ends Here====================================== */
+
+/* ==============================Container-2 Code Starts Here====================================== */
+main .containers .container-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-white);
+    padding: 6rem 2rem;
+}
+main .containers .container-2 .top-heading{
+    margin: 0 auto;
+    position: relative;
+    right: 4rem;
+    margin-top: 1.8rem;
+}
+main .containers .container-2 .top-heading div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+main .containers .container-2 .top-heading .right-arrow{
+    width: 5rem;
+    aspect-ratio: 1/1;
+}
+main .containers .container-2 .location-box{
+    position: relative;
+    right: 5rem;
+    background: #868b8b;
+    height: 16rem;
+    width: 25rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+main .containers .container-2 .location-box div{
+    display: flex;
+    align-items: center;
+    margin-top: 1.4em;
+    justify-content: center;
+    font-weight: 600;
+}
+main .containers .container-2 .location-box div input{
+    background-color: var(--color-white);
+    width: 15rem;
+    height: 2rem;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    color: var(--color-black);
+    border-radius: 0.7rem;
+    padding: 0.4rem;
+    cursor: pointer;
+    word-spacing: 0.05rem;
+}
+main .containers .container-2 .location-box div .locate-btn{
+    background: var(--color-white);
+    color: var(--color-dark);
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 530;
+    margin-top: 1rem;
+}
+/* ==============================Container-2 Code Ends Here====================================== */
+
+/* ==============================Container-3 Code Starts Here====================================== */
+main .containers .container-3{
+    padding: 6rem 2rem;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .containers .container-3 .helping-angel{
+    padding: 0rem 3rem;
+    margin-bottom: 2rem;
+}
+main .containers .container-3 .help-seeker{
+    padding: 0rem 3rem;
+    margin-bottom: 2rem;
+}
+main .containers .container-3 .helping-angel div{
+    display: flex;
+    justify-content: center;
+}
+main .containers .container-3 .help-seeker div{
+    display: flex;
+    justify-content: center;
+}
+main .containers .container-3 .helping-angel div .btn-click,
+main .containers .container-3 .help-seeker div .btn-click{
+    margin-top: 1rem;
+    background: var(--color-dark);
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+}
+/* ==============================Container-3 Code Ends Here====================================== */
+
+
+/* ==============================Container-4 Code Starts Here====================================== */
+main .containers .container-4{
+    padding: 6rem 2rem;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    height: 20rem;
+    padding: 8rem;
+}
+
+main .containers .container-4 #map{
+    height: 18rem;
+    width: 100%;
+    border: 4px solid var(--color-primary);
+    border-radius: var(--border-radius);
+}
+/* ==============================Container-4 Code Ends Here====================================== */
+
+/* ==============================Container-5 Code Starts Here====================================== */
+.extra-padding{
+    padding-right: 6rem;
+}
+
+main .containers .container-5{
+    padding: 6rem 2rem;
+    background: var(--color-white);
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+main .containers .container-5 .feedback-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  0 auto;
+    padding-right: 10rem;
+}
+.star-widget input{
+    display: none;
+}
+.star-widget .stars{
+    position: relative;
+    right: 1.8rem;
+}
+.star-widget .stars label{
+    font-size: 1.6rem;
+    color: rgb(182, 177, 177);
+    padding: 0.8rem;
+    float: right;
+    transition: all 0.3s ease;
+}
+input:not(:checked)~label:hover,
+input:not(:checked)~label:hover ~ label{
+    color: #fd4;
+    cursor: pointer;
+
+}
+input:checked~label
+{
+    color: #fd4;
+}
+input#rate-5:checked~label
+{
+    color: #fe7;
+    text-shadow: 0 0 2px #952;
+}
+form .textarea{
+    width: 100%;
+}
+form .textarea textarea{
+    color: white;
+    outline: none;
+    background: #4f4c5b;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 1rem;
+ }
+ form .btn{
+    display: flex;
+    justify-content: center;
+}
+form .btn button{
+    background: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 530;
+ }
+ form .btn button:hover{
+    background: var(--color-primary);
+    color: var(--color-black);
+    font-weight: 530;
+    font-size: 1rem;
+ }
+
+ /*=================== Container 5 Code Ends Here========== */
+
+ /* ==============================Container-6 Code Starts Here====================================== */
+ main .containers .container-6{
+    padding: 2rem 2rem;
+    background: var(--color-black);
+}
+main .containers .container-6 .heading{
+    display: flex;
+    justify-content: center;
+}
+main .containers .container-6 .heading .footer-head{
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+main .containers .container-6 .sub-heading .footer-text{
+    color: var(--color-white);
+    text-align: center;
+    word-spacing: 0.1rem;
+    padding:  0 5rem;
+}
+main .containers .container-6 .table{
+    margin-top: 1rem;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+  }
+  
+  td, th{
+    text-align: center;
+    padding: 8px;
+  }
+  

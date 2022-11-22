@@ -34,7 +34,7 @@ res.render("form")
 });
 
 app.get("/signup",(req,res) => {
-    res.render("signup")
+    res.render("signin")
 });
 
 app.get("/signin",(req,res)=>
@@ -62,7 +62,7 @@ app.post("/signup",async(req,res)=>{
     const signuped=await registerhelper.save();
     res.status(201).render("index");
     }else{
-        res.send("password are not matching")
+        res.render("error1");
     }
 }
 catch(error){

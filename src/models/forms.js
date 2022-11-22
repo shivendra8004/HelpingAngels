@@ -2,16 +2,20 @@ const mongoose=require('mongoose');
 
 const helpformschema=new mongoose.Schema({
  name:{
-    type:String
+    type:String,
+    required:true
  },
  problem:{
-    type:String
+    type:String,
+    required:true
  } ,
  Price:{
-    type:Number
+    type:Number,
+    required:true
  },
  worklocation:{
-    type:String
+    type:String,
+    required:true
  }
 })
 
