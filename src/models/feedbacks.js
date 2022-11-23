@@ -1,12 +1,16 @@
-const mongoose=require('mongoose');
+const mongoose = require('mongoose');
 
-const feedbackschema=new mongoose.Schema({
- feedbackdesc:{
-    type:String,
-    required:true
- }
+const feedbackschema= new mongoose.Schema({
+
+    title:{
+        type:String,
+        // required:true
+    }
+    
+    
+
 })
 
-const Feedback=new mongoose.model("Feedback",feedbackschema)
+const Feedback =new mongoose.model("Feedback",feedbackschema)
 
-module.exports=Feedback;
+module.exports =Feedback;

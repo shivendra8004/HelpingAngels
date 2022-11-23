@@ -7,7 +7,7 @@ require('./db/conn');
 
 const Signup=require("./models/signups")
 const Form=require("./models/forms");
-const Feedback = require('./models/feedbacks');
+const Feedback = require("./models/feedbacks");
 const static_path = path.join("__dirname")
 
 
@@ -101,7 +101,7 @@ app.post("/form",async(req,res)=>{
     })
     const formsubmitted=await formsubmission.save();
     res.status(201).render("index")
-    
+    // res.send("Thank you for your feedback")
     } catch (error) {
         res.status(400).send(error);
         
@@ -109,18 +109,18 @@ app.post("/form",async(req,res)=>{
     
     })
 
-//     app.post("/star-rating",async(req,res) => {
-//    try {
-//     const feedbacksub=new Feedback({
-//         feedbackdesc: req.body.feedbackdesc
-//     })
-//     const feedbacksubmitted=await feedbacksub.save();
-//     res.status(201).render("index")
-//     } catch (error) {
-//         res.status(400).send(error);
-//    }
-//     })
-    
+    app.post("/feedback",async(req,res) => {
+        try {
+          const userfeedback=new Feedback({
+            title:req.body.title
+          })
+          const feedbackdone=await userfeedback.save();
+        //   res.status(201).render("index")
+        res.send("Thank you for your feedback")
+        } catch (error) {
+          res.status(400).send(error);
+        }
+        });
 
 
 app.listen(port,()=>{
