@@ -23,26 +23,26 @@
 
 <body>
     <!--------------------Navbar Code--------------------------->
-    <nav>
+    <nav id="nav">
         <div class="container">
             <h1 class="logo">
                 HELPING ANGELS
             </h1>
             <div class="options">
-                <div class="give-help"><a href="">Give Help</a></div>
+                <div class="give-help"><a href="./giveHelp.html">Give Help</a></div>
                 <div class="get-help"><a href="/form">Get Help</a></div>
-                <button class="login"><a href="/signin">Login</a></button>
+                <button class="login">Login</button>
             </div>
         </div>
     </nav>
     <!--------------------Navbar Code Ends--------------------------->
 
     <!--------------------Main Body Code Starts Here--------------------------->
-    <main>
+    <main id="main">
         <div class="containers">
             <!--------------------Container-1 Code Starts Here--------------------------->
             <div class="container-1">
-                <img class="bg-img" src="../resources/Help-1.png" alt="Helping People Background">
+                <img class="bg-img" src="./Resources/Help-1.png" alt="Helping People Background">
                 <div class="top-heading">
                     <h2 class="text-heading">You Feel Alive If You Feel Like You Can Help Others</h2>
                     <p class="text-para">It doesn't matter what you have or what you've accomplished <br />In the end,
@@ -84,7 +84,7 @@
                     <p class="text-para">Helping angels are people who are willing to help those who are in need of help
                         and support. If you want to be a helping angel, please click on the button below.</p>
                     <div>
-                        <button type="button" class="btn-click"><a href="/signin">Click Here</a></button>
+                        <a href="./giveHelp.html"><button type="button" class="btn-click">Click Here</button></a>
                     </div>
                 </div>
                 <div class="help-seeker">
@@ -92,7 +92,7 @@
                     <p class="text-para">Help seekers are those who are in trouble and require support and assistance.
                         If you are a help seeker, don't worry; just click on the button below.</p>
                     <div>
-                        <button type="button" class="btn-click"><a href="/form">Click Here</a></button>
+                        <a href="./getHelp.html"><button type="button" class="btn-click">Click Here</button></a>
                     </div>
                 </div>
             </div>
@@ -132,13 +132,13 @@
                             <input type="radio" name="rate" id="rate-5">
                             <label for="rate-5" class="fas fa-star"></label>
                         </div>
-                        <form action="/star-rating" method=" POST">
+                        <form>
                             <div class="textarea">
-                                <textarea cols="30" rows="8" placeholder="Describe Your Experience..."></textarea>
+                                <textarea cols="30" rows="8" placeholder="Describe Your Experience..." name="feedbackdesc"></textarea>
                             </div>
-                            <div class="btn">
-                                <button type="submit">Post</button>
-                            </div>
+                             <div class="btn">
+                  <button type="submit">Post</button>
+                </div>
                         </form>
                     </div>
                 </div>
@@ -189,6 +189,71 @@
             </div>
         </div>
     </main>
+    <!-- SignIn Form -->
+    <div class="box ">
+        <div class="form-signin">
+            <form action="/signin" method="post">
+                <h2>Sign in</h2>
+                <div class="inputBox">
+                    <input type="text" required="required" name="emailid">
+                    <span>Email Id</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required" name="password">
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a >Forgot Password</a>
+                    <a class="signup" >Signup</a>
+                </div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+    <!-- Sign Up Form  -->
+    <div class="signup-box">
+        <div class="form">
+            <form action="/signup" method="post">
+                <h2 class="signUp-title">Sign Up</h2>
+                <div class="signUp-inputBox">
+                    <input type="text" required="required" name="firstname">
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="signUp-inputBox">
+                    <input type="text" required="required" name="lastname">
+                    <span>Full Name</span>
+                    <i></i>
+                </div>
+                <div class="signUp-inputBox">
+                    <input type="text" required="required" name="emailid">
+                    <span>Email Id</span>
+                    <i></i>
+                </div>
+                <div class="signUp-inputBox">
+                    <input type="text" required="required" name="aadhar">
+                    <span>Aadhar Card Number</span>
+                    <i></i>
+                </div>
+                <div class="signUp-inputBox">
+                    <input type="password" required="required" name="password">
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <div class="signUp-inputBox">
+                    <input type="password" required="required" name="cpassword">
+                    <span>Confirm Password</span>
+                    <i></i>
+                </div>
+                <div class="signUp-links">
+                    <a class="signin">Signin</a>
+                </div>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzLOnGfrn3T1E2TfxY9L33qZXCZBw-SyI&callback=initMap">
         </script>

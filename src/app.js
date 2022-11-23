@@ -6,7 +6,8 @@ const port=process.env.port || 3000;  //jo bhi avalable port ho vo allot ho jaay
 require('./db/conn');
 
 const Signup=require("./models/signups")
-const Form=require("./models/forms")
+const Form=require("./models/forms");
+const Feedback = require('./models/feedbacks');
 const static_path = path.join("__dirname")
 
 
@@ -33,14 +34,14 @@ app.get("/form",(req,res)=>
 res.render("form")
 });
 
-app.get("/signup",(req,res) => {
-    res.render("signin")
-});
+// app.get("/signup",(req,res) => {
+//     res.render("signin")
+// });
 
-app.get("/signin",(req,res)=>
-{
-res.render("signin")
-});
+// app.get("/signin",(req,res)=>
+// {
+// res.render("signin")
+// });
 
 app.post("/signup",async(req,res)=>{
     try{
@@ -107,6 +108,18 @@ app.post("/form",async(req,res)=>{
     }
     
     })
+
+//     app.post("/star-rating",async(req,res) => {
+//    try {
+//     const feedbacksub=new Feedback({
+//         feedbackdesc: req.body.feedbackdesc
+//     })
+//     const feedbacksubmitted=await feedbacksub.save();
+//     res.status(201).render("index")
+//     } catch (error) {
+//         res.status(400).send(error);
+//    }
+//     })
     
 
 
