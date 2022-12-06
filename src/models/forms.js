@@ -5,6 +5,9 @@ const helpformschema=new mongoose.Schema({
     type:String,
     required:true
  },
+ issue:{
+   type:String
+ },
  problem:{
     type:String,
     required:true
@@ -16,6 +19,10 @@ const helpformschema=new mongoose.Schema({
  worklocation:{
     type:String,
     required:true
+ },
+ status:{
+   type:String,
+   possiblevalues:['Resolved','Unresolved']
  }
 })
 

@@ -269,11 +269,11 @@ main .containers .container-5 .feedback-box{
 .star-widget input{
     display: none;
 }
-.star-widget .stars{
+.star{
     position: relative;
     right: 1.8rem;
 }
-.star-widget .stars label{
+.star-widget label{
     font-size: 1.6rem;
     color: rgb(182, 177, 177);
     padding: 0.8rem;

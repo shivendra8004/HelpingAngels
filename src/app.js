@@ -28,12 +28,20 @@ app.use('/js',express.static(__dirname+'./../public/js'));   //to add external j
 app.get("/",(req,res) => {
 res.render("index")
 });
+app.get("/feed",(req,res) => {
+    res.render("feed")
+    });
 
 app.get("/form",(req,res)=>
 {
 res.render("form")
 });
 
+app.get("/Gethelpdata",async(req,res) => {
+let allproduct=await Form.find();
+res.send(allproduct);
+// console.log(ai);
+})
 // app.get("/signup",(req,res) => {
 //     res.render("signin")
 // });
@@ -95,8 +103,10 @@ app.post("/form",async(req,res)=>{
         const formsubmission=new Form({
     
             name: req.body.name,
+            issue:req.body.issue,
             problem:req.body.problem,
             Price:req.body.Price,
+            status:req.body.status,
             worklocation:req.body.worklocation
     })
     const formsubmitted=await formsubmission.save();

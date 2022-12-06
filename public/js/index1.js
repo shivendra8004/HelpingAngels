@@ -50,19 +50,27 @@ function initMap(lat, lon) {
   // Display Map
   var map = new google.maps.Map(document.getElementById("map"), option);
   // Array for latitude and longitude
-  // var latitude = [24.4348];
-  // var longitude = [77.1609];
-  // //   Loop for Adding marker on each Lat and long
-  // for (let i = 0; i <= latitude.length; i++) {
-  //   addMarker(latitude[i], longitude[i]);
-  // }
-  // // Add Marker Function
-  // function addMarker(lat, lon) {
-  //   var marker = new google.maps.Marker({
-  //     position: { lat: lat, lng: lon },
-  //     map: map,
-  //   });
-  //   const addmarker = addMarker(lat, lon);
-  //   return addmarker;
-  // }
+  var latitude = [24.4348];
+  var longitude = [77.1609];
+  //   Loop for Adding marker on each Lat and long
+  for (let i = 0; i <= latitude.length; i++) {
+    addMarker(latitude[i], longitude[i]);
+  }
+  // Add Marker Function
+  function addMarker(lat, lon) {
+    var marker = new google.maps.Marker({
+      position: { lat: lat, lng: lon },
+      map: map,
+    });
+    const addmarker = addMarker(lat, lon);
+    return addmarker;
+  }
+  var map = new google.maps.Map(document.getElementById("map"), option);
+  // Array for latitude and longitude
+  var latitude = [24.4348];
+  var longitude = [77.1609];
+  //   Loop for Adding marker on each Lat and long
+  for (let i = 0; i <= latitude.length; i++) {
+    addMarker(latitude[i], longitude[i]);
+  }
 }

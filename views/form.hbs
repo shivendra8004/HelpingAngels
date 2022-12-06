@@ -1,30 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
-    <style>
-        .textarea{
-            height: 50px;
-            width:80px;
-        }
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Helping Angels | Get Help</title>
+    <meta
+      name="description"
+      content="Anyone can help someone or receive help at any time, anywhere, on the website helping angels."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./Resources/help-icon.png" />
+    <!--------------------IconScout CDN--------------------------->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+    <!--------------------Styles / Css Code--------------------------->
+    <link rel="stylesheet" href="../css/getHelp.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
-    </style>
-</head>
-<body>
-    <form action="/form" method="post">
-    <label for="name">NAME</label>
-    <input type="text" name="name" placeholder="Name" style="display:block;">
-    {{!-- <input type="text" name="problem" placeholder="Describe your problem" class="textarea"> --}}
-    <label for="problem">Problem description</label>
-    <textarea name="problem" id="" cols="30" rows="10" placeholder="Describe your problem" style="display:block;"></textarea>
-    <label for="Price">Price</label>
-    <input type="number" name="Price" placeholder="write the price" style="display:block;"> 
-    <label for="address">address</label> 
-    <textarea name="worklocation" id="" cols="30" rows="10" placeholder="addresss" style="display:block;"></textarea>
-    <input type="submit" value="POST">
-    </form>
-</body>
+    <!--------------------Tailwind CSS--------------------------->
+
+    <!--------------------JavaScript Code--------------------------->
+    <script src="./js/index1.js" async defer></script>
+  </head>
+
+  <body>
+    <!--------------------Navbar Code--------------------------->
+    <nav>
+      <div class="container">
+        <h1 class="logo">HELPING ANGELS</h1>
+        <div class="options">
+          <div class="give-help"><a href="./giveHelp.html">Give Help</a></div>
+          <div class="home"><a href="./index.html">Home Page</a></div>
+        </div>
+      </div>
+    </nav>
+    <!--------------------Navbar Code Ends--------------------------->
+    <main>
+      <div class="containers">
+        <div class="get-container-1">
+          <div>
+            <h2 class="text-heading">Don't Worry</h2>
+            <p class="text-para">
+              We and everyone else on the map are ready to assist you, so stay
+              calm and complete the information below so we can send your
+              problem to our proud helpers in your area.
+            </p>
+          </div>
+          <div id="map"></div>
+        </div>
+        <div class="get-container-2">
+          <form action="/form" method="post">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Enter Your Name" />
+            <label for="name">Type of issue</label>
+            <input type="text" name="issue" placeholder="Enter Your issue" />
+            <label for="problem">Description</label>
+            <textarea name="problem" id="" cols="30" rows="6" placeholder="Describe Your Problem Here" ></textarea>
+            <label for="price">Enter Your Budget</label>
+            <input type="text" name="Price" placeholder="Enter your budget here"/>
+            <label for="address">Work Location</label>
+            <input type="text" name="worklocation" placeholder="Enter the location of Work"/>
+            <div class="issue">
+                <p>Status of Issue</p>
+                <div class="radio">
+                  <input type="radio" name="status" id="notresolved" checked="checked" value="Unresolved"/>
+                  <label for="notresolved">Not Resolved</label><br/>
+                  <input type="radio" name="status" id="resolved" value="Resolved" />
+                  <label for="resolved">Resolved</label>
+                </div>
+            </div>
+            <input id="post" type="submit" value="Post" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9hS7k8oXvJ23-uRGZIg62bI3zRUzWmW0&callback=initMap"
+    ></script>
+  </body>
 </html>
