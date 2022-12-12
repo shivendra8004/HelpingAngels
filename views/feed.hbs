@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Helping Angels | Give Help</title>
+    <meta name="description"
+        content="Anyone can help someone or receive help at any time, anywhere, on the website helping angels." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./Resources/help-icon.png" />
+    <!--------------------IconScout CDN--------------------------->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <!--------------------Styles / Css Code--------------------------->
+    <link rel="stylesheet" href="../css/giveHelp.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!--------------------Tailwind CSS--------------------------->
+
+    <!--------------------JavaScript Code--------------------------->
     <script src="js/script.js"></script>
-    <title>Welcome to feed</title>
 </head>
+
 <body>
-    <h1>WELCOME TO FEED</h1>
-    
-    {{!-- <div style="border:5px solid black;">
-        <div>Name: <p></p></div>
-        <div>problem: <p></p></div>
-        <div>price: <p></p></div>
-        <div>address: <p></p></div>
-        <button>Proceed further</button>
-    </div> --}}
-    <div id="Saksham"></div>
-    
+    <!--------------------Navbar Code--------------------------->
+    <nav>
+        <div class="container">
+            <h1 class="logo">
+                HELPING ANGELS
+            </h1>
+            <div class="options">
+                <div class="get-help"><a href="./getHelp.html">Get Help</a></div>
+                <div class="home"><a href="./index.html">Home Page</a></div>
+            </div>
+        </div>
+    </nav>
+    <!--------------------Navbar Code Ends--------------------------->
+    <!-- ----------------------------- Main Body Code Starts Here -------------------------------- -->
+    <main>
+        <div class="container">
+            <!-- ----------------------------- Left Container Code Starts Here -------------------------------- -->
+            <div class="left">
+                <h3>FILTERS</h3>
+                <div class="range">
+                    <form>
+                        <label for="vol">Nearby Area</label><br>
+                        <input type="range" id="vol" name="vol" min="0" max="20"><br>
+                        <p><span>0km</span><span>5km</span><span>10km</span><span>15km</span><span>20km</span></p>
+                        <input type="submit" value="Filter">
+                    </form>
+                </div>
+            </div>
+            <!-- ----------------------------- Left Container Code Ends Here -------------------------------- -->
+
+            <!-- ----------------------------- Right Container Code Starts Here -------------------------------- -->
+            <div class="right">
+                <h3>Top Results</h3>
+                <div class="feeds" id="Saksham"></div>
+            </div>
+        </div>
+    </main>
+    <script>
+    </script>
+
+
 </body>
+
 </html>

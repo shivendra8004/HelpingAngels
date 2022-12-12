@@ -50,6 +50,9 @@ res.send(allproduct);
 // {
 // res.render("signin")
 // });
+app.get("/amit",(req,res)=>{
+    res.send("i am amit")
+})
 
 app.post("/signup",async(req,res)=>{
     try{
